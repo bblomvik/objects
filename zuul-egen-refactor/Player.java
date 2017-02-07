@@ -1,4 +1,4 @@
-
+import java.util.HashMap;
 /**
  * Write a description of class Player here.
  * 
@@ -11,6 +11,7 @@ public class Player
     private int totalWeight;
     private Room currentRoom;
     private Room previousRoom;
+    private HashMap<String, Item> carriedItems;
 
     /**
      * Constructor for objects of class Player
@@ -20,6 +21,7 @@ public class Player
     {
         name = "playerName";
         totalWeight = 2000;
+        carriedItems = new HashMap();
     }
 
     /**
@@ -28,7 +30,6 @@ public class Player
     public void createRooms()
     {
         Room outside, theater, pub, lab, office, cellar;
-        Item flower, sword, potion, key;
 
         // create the rooms
         outside = new Room("outside the main entrance of the university");
@@ -57,18 +58,6 @@ public class Player
 
         /////////////////////////////////////////////
 
-        //create items
-        flower = new Item("Flower: a beautiful red flower.", 3);
-        sword = new Item("Longsword: a powerful weapon", 2);
-        potion = new Item("Potion, a healing drink", 1);
-        key = new Item("Key: this will open a locked door somewhere. but it's heavy!", 5);
-        sword.printItem();
-
-        // place items in room
-        outside.setItem("flower", flower);
-        pub.setItem("potion", potion);
-        office.setItem("key", key);
-        cellar.setItem("sword", sword);
 
         /////////////////////////////////////////////
         

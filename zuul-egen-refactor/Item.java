@@ -8,15 +8,17 @@
  */
 public class Item
 {
+    private String name;
     private String description;
     private int weight;
 
     /**
      * Constructor for objects of class Item
      */
-    public Item(String description, int weight)
+    public Item(String name, String description, int weight)
     {
         // initialise instance variables
+        this.name = name;
         this.description = description;
         this.weight = weight;
     }
