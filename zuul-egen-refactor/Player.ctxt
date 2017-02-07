@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Player()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Player\n\ Creates\ a\ player\ with\ generic\ name\ and\ total\ weight\ 2000g\n
+comment1.params=
+comment1.target=void\ createRooms()
+comment1.text=\n\ Create\ all\ the\ rooms\ and\ link\ their\ exits\ together.\n
+comment2.params=command
+comment2.target=void\ goRoom(Command)
+comment2.text=\ \n\ Try\ to\ go\ in\ one\ direction.\ If\ there\ is\ an\ exit,\ enter\n\ the\ new\ room,\ otherwise\ print\ an\ error\ message.\n
+comment3.params=
+comment3.target=void\ back()
+comment3.text=\n\ Go\ to\ previous\ room\n
+comment4.params=
+comment4.target=void\ printLocationInfo()
+comment4.text=\n\ Prints\ your\ current\ location\ and\ possible\ exits\n
+comment5.params=
+comment5.target=void\ look()
+comment5.text=\n\ Take\ a\ look\ around\ the\ room\ and\ print\ description\ and\ exits\n
+comment6.params=
+comment6.target=void\ fight()
+comment6.text=\n\ Engage\ battle\ with\ creature\n
+numComments=7
