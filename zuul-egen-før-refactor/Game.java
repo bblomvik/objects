@@ -19,6 +19,7 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
+    private Room previousRoom;
     private Item itemInRoom;
 
     /**
@@ -84,7 +85,7 @@ public class Game
         
         
         currentRoom = outside;  // start game outside
-        itemInRoom = flower;	// places a flower outside
+        itemInRoom = flower;    // places a flower outside
     }
 
     /**
@@ -168,6 +169,9 @@ public class Game
         else if (commandWord.equals("go")) {
             goRoom(command);
         }
+        else if (commandWord.equals("back")) {
+            back();
+        }
         else if (commandWord.equals("quit")) {
             wantToQuit = quit(command);
         }
@@ -219,6 +223,24 @@ public class Game
             System.out.println("There is no door!");
         }
         else {
+            previousRoom = currentRoom;
+            currentRoom = nextRoom;          
+            System.out.println(currentRoom.getLongDescription());
+            System.out.println();
+            System.out.println();
+        }
+    }
+    
+    /**
+     * Go to previous room
+     */
+    private void back() {
+        if (previousRoom == null) {
+            System.out.println("Sorry, you can't go back");
+        }
+        else {
+            Room nextRoom = previousRoom;
+            previousRoom = currentRoom;
             currentRoom = nextRoom;
             System.out.println(currentRoom.getLongDescription());
             System.out.println();
